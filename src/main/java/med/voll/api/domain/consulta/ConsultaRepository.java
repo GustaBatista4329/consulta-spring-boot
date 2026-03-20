@@ -8,5 +8,5 @@ import java.time.LocalDateTime;
 
 public interface ConsultaRepository extends JpaRepository<Consulta, Long> {
 
-    Boolean existsByMedicoIdAndData(Long aLong);
+    Boolean existsByMedicoIdAndData(Long aLong, @NotNull @Future LocalDateTime data);
 }
